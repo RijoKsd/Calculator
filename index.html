@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="icon" href="./assets/images/calculator.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="icon"
+      href="./assets/images/calculator.png"
+      type="image/x-icon"
+    />
     <!-- favicon icon -->
-
-</head>
-<body>
-  
+  </head>
+  <body>
     <!-- <div class="theme-switch">
         <select name="" id="">
             <option value="dark">Dark Mode</option>
@@ -20,49 +22,88 @@
     </div> -->
 
     <main>
-       
-        <div class="calculator">
-            <div class="screen">
-                   
-            </div>
-            <div class="buttons">
-                <div class="row">
-                    <button class="btn top">AC</button>
-                    <button class="btn top">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5" height="48" width="48"><path d="M21.531 20.5H7.992a1.5 1.5 0 0 1-1.161-.55L.92 12.725a.748.748 0 0 1 0-.95L6.831 4.55A1.5 1.5 0 0 1 7.992 4h13.539a1.5 1.5 0 0 1 1.5 1.5V19a1.5 1.5 0 0 1-1.5 1.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="m11.031 8.5 7.5 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="m18.531 8.5-7.5 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                     
-                    </button>
-                    <button class="btn top">%</button>
-                    <button class="btn right" > / </button>
-                </div>
-                <div class="row">
-                    <button class="btn">7</button>
-                    <button class="btn">8</button>
-                    <button class="btn">9</button>
-                    <button class="btn right">*</button>
-                </div>
-                <div class="row">
-                    <button class="btn">4</button>
-                    <button class="btn">5</button>
-                    <button class="btn">6</button>
-                    <button class="btn right">-</button>
-                </div>
-                <div class="row">
-                    <button class="btn">1</button>
-                    <button class="btn">2</button>
-                    <button class="btn">3</button>
-                    <button class="btn right">+</button>
-                </div>
-                <div class="row">
-                    <button class="btn zero">0</button>
-                    <button class="btn">.</button>
-                    <button class="btn right equal" >=</button>
-                    <!-- <button class="btn">+</button> -->
-                </div>
-            </div>
+      <div class="calculator">
+        <div class="screen">
+          <div class="previous" data-previous></div>
+          <div class="current" data-current></div>
         </div>
+        <div class="buttons">
+          <div class="row">
+            <button class="top" data-clear>AC</button>
+            <button class="top" data-delete data-number>
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="1.5"
+                height="48"
+                width="48"
+              >
+                <path
+                  d="M21.531 20.5H7.992a1.5 1.5 0 0 1-1.161-.55L.92 12.725a.748.748 0 0 1 0-.95L6.831 4.55A1.5 1.5 0 0 1 7.992 4h13.539a1.5 1.5 0 0 1 1.5 1.5V19a1.5 1.5 0 0 1-1.5 1.5Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="m11.031 8.5 7.5 7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="m18.531 8.5-7.5 7.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+            <button class="top" data-operation>%</button>
+            <button class="right" data-operation>/</button>
+          </div>
+          <div class="row">
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button class="right" data-operation>*</button>
+          </div>
+          <div class="row">
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button class="right" data-operation>-</button>
+          </div>
+          <div class="row">
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button class="right" data-operation>+</button>
+          </div>
+          <div class="row">
+            <button data-number>0</button>
+            <button data-dot>.</button>
+            <button class="right equal" data-equals>=</button>
+          </div>
+        </div>
+      </div>
     </main>
-    
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer__text">
+          <p>
+            Made by
+            <a href="https://rijoksd.netlify.app/" target="_blank"
+              >Rijo Sebastian
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
